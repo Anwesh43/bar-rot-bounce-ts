@@ -17,7 +17,7 @@ export const useAnimatedScale = (scGap : number = 0.01, delay : number = 20) => 
                         }
                         return prev + scGap 
                     })
-                })
+                }, delay)
             }
         }
     }
@@ -67,7 +67,7 @@ export const useStyle = (w : number, h : number, scale : number) : StyleProp => 
             return {
                 position,
                 left: `0px`,
-                top: `0px`,
+                top: `${-size}px`,
                 width: `${size}px`,
                 height: `${size}px`,
                 background,
